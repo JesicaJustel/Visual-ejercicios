@@ -1,14 +1,20 @@
 import*as rls from "readline-sync";
-let numero:number=rls.questionInt("ingrese un numero");
+let numeroingresado,negativo,positivo:number;
+numeroingresado=-1;
+negativo=-1;
+positivo=0;
 let numeromaximo:number=rls.questionInt("ingrese numero maximo:");
-let i:number=0;
-while (numeromaximo !== 0); {
-    if(i <= numeromaximo) {
-    i=numero;}
-    i=numero -1 ;}
-    i=numeromaximo;{
-   
-    numero=rls.questionInt("ingrese numero:");
-    numeromaximo=rls.questionInt("el numero maximo es:");
+let numerominimo:number=rls.questionInt("ingrese el numero minimo:");
+while(numeroingresado!=0) {
+    numeroingresado=rls.questionInt("ingrese un numero:");
+}if(numeroingresado>positivo&&numeroingresado!=0){
+positivo=positivo+1;}
+if(numeroingresado<negativo&&numeroingresado!=0){
+    negativo=negativo+1;
+}if(numeromaximo==0){
+    numeromaximo=positivo;
+}if(numerominimo!=0){
+    numerominimo=negativo;
 }
-console.log("el numero maximo es:"+i);
+console.log("el numero maximo es:",positivo+1);
+console.log("el numero minimo es:",negativo+1);
